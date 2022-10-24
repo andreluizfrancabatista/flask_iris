@@ -10,7 +10,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def prediction():
     if request.method == 'POST':
-        return request.form.get('val1')
+        return jsonify(request.form)
     else:
         return jsonify({'msg': 'use o form'})
 
