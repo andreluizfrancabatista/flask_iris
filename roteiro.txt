@@ -1,0 +1,33 @@
+Roteiro para criação de uma aplicação de IA na web com Flask
+
+- criar uma pasta para o app
+- login no github
+- login no railway app
+-- create new project, template flask, deploy no github
+- entrar na pasta do app, abrir o terminal do vscode com git bash
+- comando: git clone <link https do repo>
+-- sign in at github
+- subir a aplicação para o railway.app e testar
+-- (git add . / git commit -m "comments" / git push origin main)
+
+- criar o frontend
+-- no main.py, na route('/'), return render_template("index.html")
+-- criar pasta 'templates', criar 'index.html' dentro da pasta 'templates'
+-- criar um form com method=post, action={{ url_for(request.endpoint)}}predict
+-- para usar CSS, criar a pasta 'static', 
+-- inserir no index.html: <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+- criar o backend
+-- no main.py, criar route('/predict', methods=['POST']), if method == post, return dados
+
+
+- para rodar localmente
+-- pip install flask
+-- flask --app main run
+
+
+TODO
+- salvar o modelo treinado
+- fazer a validação dos dados no front e no back (todos preenchidos como float ou double)
+- rodar o modelo com os dados recebidos via form
+- retornar o resultado provido pelo modelo
