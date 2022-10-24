@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # return jsonify({"Choo Choo": "Welcome to your Flask app"})
-    return url_for('static', filename="index.html")
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
