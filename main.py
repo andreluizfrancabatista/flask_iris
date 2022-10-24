@@ -3,13 +3,11 @@ import os
 
 app = Flask(__name__, template_folder='templates')
 
-
 @app.route('/')
 def index():
-    # return jsonify({"Choo Choo": "Welcome to your Flask app"})
     return render_template("index.html")
 
-@app.route('/predict')
+@app.route('/predict', methods=['POST'])
 def prediction():
     if request.method == 'POST':
         return request.form.get('val1')
