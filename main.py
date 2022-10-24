@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import os
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # return jsonify({"Choo Choo": "Welcome to your Flask app"})
-    return render_template("index.html")
+    return render_template("/static/index.html")
 
 
 if __name__ == '__main__':
